@@ -44,6 +44,16 @@
       ga('create', 'UA-100690074-1', 'auto');
       ga('send', 'pageview');
 
+      // Send special event on button press
+      document.getElementById("joinBtn").onclick = function () {
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'join',
+          eventAction: 'pressed',
+          eventLabel: 'Challenge - Penguins Fake News'
+        });
+      }
+
     </script>
 
 </head>
@@ -88,7 +98,7 @@
                     <div class="header-content">
                         <div class="header-content-inner">
                             <h1>Placeholder for cool punchline to get people interested in downloading.</h1>
-                            <a href="#download" class="btn btn-outline btn-xl page-scroll">Join Now!</a>
+                            <a id="joinBtn" href="" class="btn btn-outline btn-xl page-scroll">Join Now!</a>
                         </div>
                     </div>
                 </div>
